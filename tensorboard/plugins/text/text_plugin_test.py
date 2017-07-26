@@ -382,7 +382,7 @@ class TextPluginTest(tf.test.TestCase):
     </tr>
     </tbody>
     </table>""")
-    
+
     scalar = np.array(table)
     scalar_expected = table_converted
     self.assertEqual(convert(scalar), scalar_expected)
@@ -436,7 +436,7 @@ class TextPluginTest(tf.test.TestCase):
       </tbody>
       </table>""")
     self.assertEqual(convert(d3), d3_expected)
-  
+
   def testPluginIsActiveWhenNoRuns(self):
     """The plugin should be inactive when there are no runs."""
     multiplexer = event_multiplexer.EventMultiplexer()
